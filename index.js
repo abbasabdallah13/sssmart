@@ -21,7 +21,9 @@ const io = socketIo(server, {
 // Use body-parser middleware to parse JSON requests
 app.use(bodyParser.json());
 
-
+app.get('/', (req,res) => {
+  res.status(200).send('Welcome to the SSS')
+})
 // Handle Swish webhook endpoint
 app.post('/api/success', (req, res) => {
   const paymentDetails = req.body;
