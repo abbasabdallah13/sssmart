@@ -11,7 +11,7 @@ app.use(cors())
 // Create an HTTP server using the Express app
 const server = http.createServer(app);
 
-// Create a Socket.IO instance attached to the HTTP server
+// a Socket.IO instance attached to the HTTP server
 const io = socketIo(server, {
     cors: {
       origin: '*',
