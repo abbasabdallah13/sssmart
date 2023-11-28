@@ -24,6 +24,10 @@ app.use(bodyParser.json());
 app.get('/', (req,res) => {
   res.status(200).send('Welcome to the SSS')
 })
+
+io.on("connection", (socket) => {
+  console.log("a client connected")
+})
 // Handle Swish webhook endpoint
 app.post('/api/success', (req, res) => {
   const paymentDetails = req.body;
